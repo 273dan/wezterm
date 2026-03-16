@@ -21,6 +21,11 @@ config.keys = {
         mods = "CTRL|SHIFT",
         action = wezterm.action.ActivateTabRelative(-1)
     },
+    {
+        key = '{',
+        mods = "CTRL|SHIFT",
+        action = wezterm.action.ActivateCopyMode()
+    },
 }
 
 
