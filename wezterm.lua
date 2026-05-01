@@ -5,9 +5,11 @@ local config = {}
 config.color_scheme = "Gruvbox Dark (Gogh)"
 config.font = wezterm.font "FantasqueSansM Nerd Font"
 
--- Transparency
-if os.getenv("XDG_CURRENT_DESKTOP") ~= "sway:wlroots:swayfx" then
+-- Sway specific
+if os.getenv("XDG_CURRENT_DESKTOP") ~= "sway:wlroots" then
   config.window_background_opacity = 0.7
+else
+  config.adjust_window_size_when_changing_font_size = false
 end
 
 -- Tab bar
